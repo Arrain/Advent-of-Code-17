@@ -30,5 +30,5 @@
             }
         }
 
-        console.log(sum);
+        console.log(sum*2);
     };
