@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AoC_2017</title>
+
+        <script type="text/javascript" src="day<CHANGE!!!>.js"></script>
+        
+        <script type="text/javascript">    
+
+            var parseInputRegex = new RegExp("\\r?\\n");
+
+            var inputArray = [];
+
+            var parseInputToArray = function() {
+                var theInputArea = document.getElementById("theInputArea");
+                var inputValue = theInputArea.value;
+
+                inputArray = inputValue.split(parseInputRegex);
+                console.log(inputArray);
+            };
+
+            var trimEmptyInputs = function(inp) {
+                for(var i = 0; i < inp.length; i++)
+                {
+                    var trimmedValue = inp[i].trim()
+                    if(trimmedValue === "")
+                    {
+                        inp.splice(i, 1);
+                        i--;
+                    }
+                    else
+                    {
+                        inp[i] = trimmedValue;
+                    }
+                }
+            };
+            
+            var doIt = function() {
+                parseInputToArray();
+                trimEmptyInputs(inputArray);
+
+                dailyDoIt();
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="theInputArea" cols="120" rows="12"></textarea>
+        <br/>
+        <br/>
+        <button id=parseInput onclick="doIt()">Start</button>
+    </body>
+</html>
