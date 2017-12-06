@@ -11,7 +11,6 @@
         global $currentArrangement, $previousStates;
 
         $currentState = implode(",", $currentArrangement);
-//var_dump($currentState);
         foreach($previousStates as $state)
         {
             if($state === $currentState)
@@ -25,6 +24,7 @@
         return false;
     }
 
+    //p1
     $steps = 0;
 
     while(!hasBeenSeen())
@@ -50,13 +50,12 @@
         }
 
         $steps++;
-
-        //var_dump($previousStates);
     }
     
     var_dump($steps);
 
-    $steps = 0;
+    //p2
+    $steps = 1;
 
     $currentState = implode(",", $currentArrangement);
     for($i = count($previousStates) - 1; $i >= 0; $i--)
