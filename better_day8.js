@@ -36,8 +36,8 @@
         }
 
         var mmax = 0;
-        for (var i = 0; i < inputs.length; i++) {
-
+        for (var i = 0; i < inputs.length; i++)
+	{
 	        for(var j in regs)
 	        {
 	        	if (regs[j] > mmax) {
@@ -50,13 +50,13 @@
         	{
         		executeInst(bits);
         	}
-        	
         }
 
         var max = 0;
         for(var i in regs)
         {
-        	if (regs[i] > max) {
+        	if (regs[i] > max) 
+		{
         		max = regs[i];
         	}
         }
